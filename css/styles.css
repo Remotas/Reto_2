@@ -1,0 +1,91 @@
+﻿/* Estilos generales para todos los <div> */
+div {
+    width: 150px; /* Define un ancho fijo de 150px para cada <div>. */
+    height: 150px; /* Define un alto fijo de 150px para cada <div>. */
+    margin: 10px; /* Aplica un margen de 10px alrededor de cada <div>. */
+    text-align: center; /* Alinea el texto horizontalmente al centro dentro de cada <div>. */
+    line-height: 150px; /* Alinea el texto verticalmente al centro ajustando la altura de la línea. */
+    font-size: 14px; /* Define el tamaño de la fuente del texto a 14px. */
+    font-weight: bold; /* Aplica negrita al texto dentro de los <div>. */
+    border: 1px solid black; /* Agrega un borde negro sólido de 1px alrededor de cada <div>. */
+}
+
+    /* Estilos en línea para el primer <div> */
+    div:first-of-type {
+        background-color: lightblue; /* Aplica un fondo azul claro al primer <div> que aparece en el documento. */
+    }
+
+/* Selector ID: Aplica estilos al <div> con el ID específico "selector-id" */
+#selector-id {
+    background-color: lightgreen; /* Aplica un fondo verde claro al <div> identificado por "selector-id". */
+}
+
+/* Selector Clase: Aplica estilos a los <div> con la clase "selector-clase" */
+.selector-clase {
+    background-color: lightcoral; /* Aplica un fondo coral claro a los <div> con la clase "selector-clase". */
+}
+
+/* Selector de atributo: Aplica estilos a los <div> que tienen un atributo title con un valor específico */
+div[title="Selector de atributo"] {
+    background-color: lightgoldenrodyellow; /* Aplica un fondo amarillo claro a los <div> con un atributo title igual a "Selector de atributo". */
+}
+
+/* Pseudoelemento ::before: Inserta contenido antes del texto en el quinto <div> */
+div:nth-of-type(5)::before {
+    content: "Antes - "; /* Inserta el texto "Antes - " antes del contenido del quinto <div>. */
+    color: darkblue; /* Aplica un color azul oscuro al texto agregado con el pseudoelemento ::before. */
+}
+
+/* Pseudoelemento ::after: Inserta contenido después del texto en el quinto <div> */
+div:nth-of-type(5)::after {
+    content: " - Después"; /* Inserta el texto " - Después" después del contenido del quinto <div>. */
+    color: darkblue; /* Aplica un color azul oscuro al texto agregado con el pseudoelemento ::after. */
+}
+
+/* Estilo para el quinto <div> */
+div:nth-of-type(5) {
+    background-color: lightpink; /* Aplica un fondo rosa claro al quinto <div>. */
+}
+
+/* Selector de tipo: Aplica estilos al sexto <div> */
+div:nth-of-type(6) {
+    background-color: lightskyblue; /* Aplica un fondo azul cielo claro al sexto <div>. */
+}
+
+/* Pseudoelemento :hover: Aplica estilos cuando el cursor pasa sobre el séptimo <div> */
+div:nth-of-type(7) {
+    background-color: lightgray; /* Aplica un fondo gris claro al séptimo <div> por defecto. */
+    transition: background-color 0.3s ease; /* Agrega una transición suave al cambiar el color de fondo. */
+}
+
+    div:nth-of-type(7):hover {
+        background-color: darkgray; /* Cambia el fondo a gris oscuro cuando el cursor pasa sobre el séptimo <div>. */
+        color: white; /* Cambia el color del texto a blanco mientras se pasa el cursor. */
+    }
+
+/* Combinador >: Aplica estilos a los <p> que son hijos directos de un <div> */
+div > p {
+    background-color: lightseagreen; /* Aplica un fondo verde azulado claro a los <p> hijos directos de un <div>. */
+    color: white; /* Cambia el color del texto a blanco en los <p>. */
+    height: auto; /* Permite que la altura se ajuste automáticamente al contenido del <p>. */
+    line-height: normal; /* Ajusta el espaciado entre líneas al valor normal. */
+    padding: 10px; /* Agrega un relleno interno de 10px alrededor del texto en el <p>. */
+    font-size: 12px; /* Define el tamaño de la fuente del texto en el <p> a 12px. */
+    text-align: left; /* Alinea el texto del <p> hacia la izquierda. */
+}
+
+/* Explicación:
+*- Primer div: Se usa :first-of-type para aplicar un color base.
+*- ID: Se identifica mediante #selector-id.
+*- Clase: Se usa .selector-clase.
+*- Atributo: Se selecciona con [title="Selector de atributo"].
+*- Pseudoelementos: ::before y ::after para agregar contenido antes y  después del texto.
+*- Tipo: Se selecciona div:nth-of-type(6).
+*- Hover: :hover para cambiar el color al pasar el cursor.
+*- Combinador: Se aplica a p hijos directos de un div.
+
+Combinador &gt;:
+*- Descripción: Es el contenido del elemento <p>. El texto "Combinador >" incluye un carácter especial HTML:
+  *- &gt; es el código HTML para el símbolo > (mayor que). Este código se utiliza para evitar conflictos o interpretaciones erróneas cuando se necesita mostrar el símbolo en la página web.
+*- Función en este caso: Muestra el texto "Combinador >" en el navegador. La mención al "combinador" se refiere a un concepto en CSS (combinadores) que se utilizan para seleccionar elementos 
+   basados en su relación estructural con otros. */
